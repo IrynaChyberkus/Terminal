@@ -1,0 +1,54 @@
+Первая часть первого  ДЗ
+Linux terminal (GitBash) commands
+=====================
+1) Посмотреть где я - pwd
+2) Создать папку - mkdir 35_group
+3) Зайти в папку - cd 35_group
+4) Создать 3 папки - mkdir folder1 folder2 folder3
+5) Зайти в любоую папку - cd folder1
+6) Создать 5 файлов (3 txt, 2 json) - touch file1.txt file2.txt file3.txt file4.json file5.json
+7) Создать 3 папки - mkdir f1 f2 f3
+8) Вывести список содержимого папки - ls -la
+9) + Открыть любой txt файл - cat > file1.txt
+10) + написать туда что-нибудь, любой текст. - f.e текст песни
+11) + сохранить и выйти. -  нажать Enter (иначе не сохранится последняя строка), затем нажать Ctrl+C
+12) Выйти из папки на уровень выше - cd ..
+13) переместить любые 2 файла, которые вы создали, в любую другую папку. - mv folder1/file1.txt folder1/file4.json folder2
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку. - cp folder1/file2.txt folder1/file5.json folder3
+15) Найти файл по имени - find folder2/file1.txt или в текущей директории (притом точное имя неизвестно) find . -type f -name 'f*' (имя файла начинается на f)
+16) просмотреть содержимое в реальном времени (команда grep?) изучите как она работает. tail -f folder2/file1.txt (после изменения и сохранения файла)
+17) вывести несколько первых строк из текстового файла - head -3 folder2/file1.txt (первые три)
+18) вывести несколько последних строк из текстового файла - tail -4 folder2/file1.txt (последние четыре)/
+19) просмотреть содержимое длинного файла (команда less)
+ изучите как она работает. - less folder2/file1.txt (нажать PgUp пока появится двоеточие, ввести h :h для вывода HELP, выхода из утилиты :q)
+20) вывести дату и время - date
+=========
+Задание *
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5006/terminal-hw-request -
+curl http://162.55.220.72:5006/terminal-hw-request
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13 -
+a) Создать файл с расширением .sh (touch scriptforhw.sh)
+b) Открыть его для редактир в vim (vim scriptforhw.sh)
+c) Записать в него команды из пунктов 3-8 и 13)
+d) Сохранить изменения и выйти из vim (esc затем :wq)
+i) Запустить скрипт в GitBash (sh scriptforhw.sh)
+
+#!/bin/bash
+echo 'The current directory is:'
+pwd
+cd 35_group_script
+echo 'Creating 3 new directories'
+mkdir folder1 folder2 folder3
+echo "Enter into the first of the new folders"
+cd folder1
+echo 'Creating five new files'
+touch file1.txt file2.txt file3.txt file4.json file5.json
+echo 'Creating three new folders'
+mkdir f1 f2 f3
+echo "Contens of the folder"
+ls -la
+echo 'Moving two files into another folder'
+cd ..
+mv folder1/file1.txt folder1/file4.json folder2
+
