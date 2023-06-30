@@ -1,0 +1,9 @@
+ID
+Severity
+Environment
+Title
+Steps
+Expected result
+Actual result
+Link
+Bug started
